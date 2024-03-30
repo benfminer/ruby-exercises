@@ -5,9 +5,10 @@ def substrings(string, dictionary)
   subs = {}
   dictionary.each do |word|
     if string.include?(word)
-      subs[:word] = subs[:word] + 1
+     subs = {word.to_s => string.scan(word).length}
     end
   end
+  puts subs
 end
 
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
